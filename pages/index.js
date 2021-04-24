@@ -1,65 +1,34 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import ClubLogo from '../components/ClubLogo';
+import NavBar from '../components/NavBar';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>PDA</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <NavBar />
+      <section className="bg-blue-450 flex items-center sm:justify-evenly
+      justify-center py-10 sm:h-48 md:h-64 lg:h-72 text-gray-100">
+        <img
+          src='/images/pda_logo_3_azul_amarelo.svg'
+          className="hidden sm:block h-36 w-36 md:h-48 md:w-48"  
+        />
+        <div className="flex flex-col items-center">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold">PELADA DO</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold">AMIGÃO</h1>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </section>
+      <section className="px-4 py-2">
+        <h1 className="text-2xl pb-4">Equipes</h1>
+        <div className="flex flex-wrap xs:flex-nowrap items-center justify-between">
+          <ClubLogo path='/images/Inter.svg' />
+          <ClubLogo path='/images/Milan.svg' />
+          <ClubLogo path='/images/Juventus.svg' />
+          <ClubLogo path='/images/Roma.svg' />
+        </div>
+      </section>
     </div>
   )
 }
