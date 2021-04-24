@@ -61,7 +61,7 @@ function TeamTable({ headers, data }) {
                         :
                         <td
                           key={indexData}
-                          className="text-left pl-2 cursor-pointer flex items-center"
+                          className="text-left pl-2 cursor-pointer xs:flex xs:items-center"
                           onClick={() => { showPlayerData(indexRow) }}
                         >
                           <img
