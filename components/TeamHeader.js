@@ -1,6 +1,6 @@
-function TeamHeader({ club, captain }) {
+export default function TeamHeader({ club, captain }) {
   return (
-    <div className="flex items-start my-4 sm:px-20">
+    <div className="flex items-start my-4 sm:px-10 md:px-20">
       <img
         src={`/images/${club}.svg`}
         className="h-24 w-h-24 ml-4"
@@ -19,5 +19,3 @@ function TeamHeader({ club, captain }) {
     </div>
   )
 }
-
-export default TeamHeader

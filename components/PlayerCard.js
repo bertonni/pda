@@ -1,4 +1,4 @@
-function PlayerCard({ currPlayer }) {
+export default function PlayerCard({ currPlayer }) {
   return (
     <div className="p-2 md:p-4 w-full h-4/5 relative">
       <div className="flex">
@@ -58,5 +58,3 @@ function PlayerCard({ currPlayer }) {
     </div>
   )
 }
-
-export default PlayerCard

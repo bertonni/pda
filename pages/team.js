@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import TeamHeader from "../components/TeamHeader";
 import TeamTable from "../components/TeamTable";
 
-function Team() {
+export default function Team() {
 
   const headers = ['#', 'Peladeiro', 'Posição', 'Gols', 'Assist'];
   const players = [
@@ -22,15 +22,6 @@ function Team() {
     ['21', 'Raul', 'Atacante', '8', '8']
   ];
 
-  function showData(index) {
-    setIsActive(true);
-    console.log('index:',index);
-  }
-
-  function hideData() {
-    setIsActive(false);
-  }
-
   return (
     <div>
       <Head>
@@ -42,7 +33,7 @@ function Team() {
           club="Juventus"
           captain="Pedro Henrique"
         />
-        <h1 className="px-3 sm:px-20 text-xl text-gray-550">Peladeiros</h1>
+        <h1 className="px-3 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Peladeiros</h1>
         <TeamTable
           headers={headers}
           data={players}
@@ -51,5 +42,3 @@ function Team() {
     </div>
   )
 }
-
-export default Team

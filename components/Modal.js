@@ -1,6 +1,6 @@
 import PlayerCard from './PlayerCard';
 
-function Modal({ active, closeModal, player }) {
+export default function Modal({ active, closeModal, player }) {
   return (
     <>
       {active ? (
@@ -38,5 +38,3 @@ function Modal({ active, closeModal, player }) {
     </>
   );
 }
-
-export default Modal;

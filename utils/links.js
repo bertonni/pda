@@ -7,10 +7,10 @@ export default {
   //   title: 'Financeiro',
   //   url: '/finances'
   // },
-  // rankings: {
-  //   title: 'Rankings',
-  //   url: '/rankings'
-  // },
+  rankings: {
+    title: 'Rankings',
+    url: '/rankings'
+  },
   // leaderboard: {
   //   title: 'Classificação',
   //   url: '/leaderboard'

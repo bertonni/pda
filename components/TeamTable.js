@@ -2,7 +2,7 @@ import { useState } from "react";
 import playersData from '../utils/players.json';
 import Modal from "./Modal";
 
-function TeamTable({ headers, data }) {
+export default function TeamTable({ headers, data }) {
 
   const [isActive, setIsActive] = useState(false);
   const [currentPlayer, setCurrentPlayer] = useState(null);
@@ -22,7 +22,7 @@ function TeamTable({ headers, data }) {
   }
 
   return (
-    <div className="px-3 py-3 sm:px-20 flex justify-center">
+    <div className="px-3 py-3 sm:px-10 md:px-20 flex justify-center">
       <table className="border-collapse w-full">
         <thead>
           <tr className="border-b-3 border-gray-350 font-light h-9">
@@ -87,5 +87,3 @@ function TeamTable({ headers, data }) {
     </div>
   )
 }
-
-export default TeamTable
