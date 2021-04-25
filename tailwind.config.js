@@ -6,10 +6,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'rom': "url('/images/roma_bg.png')",
-        'int': "url('/images/inter_bg.png')",
-        'mil': "url('/images/milan_bg.png')",
-        'juv': "url('/images/juventus_bg.png')",
+        'rom-header': "url('/images/roma_bg.png')",
+        'int-header': "url('/images/inter_bg.png')",
+        'mil-header': "url('/images/milan_bg.png')",
+        'juv-header': "url('/images/juventus_bg.png')"
       }),
       colors: {
         'gray-150': '#E9EAF5',
