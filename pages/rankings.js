@@ -35,7 +35,7 @@ export default function Rankings() {
         <title>Rankings</title>
       </Head>
       <div className="w-full">
-        <NavBar />
+        <NavBar page={'rankings'} />
         <div className="flex flex-col sm:flex-row">
           <div className="flex flex-col w-full pt-4">
             <h1 className="px-3 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Artilharia</h1>

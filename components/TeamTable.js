@@ -49,7 +49,7 @@ export default function TeamTable({ headers, data }) {
             data.map((rowData, indexRow) => {
               return (
                 <tr key={indexRow}
-                  className="border-b border-gray-550 font-normal h-10
+                  className="border-b border-gray-300 font-normal h-10
                   text-center hover:bg-gray-200">
                   {
                     rowData.map((item, indexData) => {

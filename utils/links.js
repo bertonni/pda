@@ -11,10 +11,10 @@ export default {
     title: 'Rankings',
     url: '/rankings'
   },
-  // leaderboard: {
-  //   title: 'Classificação',
-  //   url: '/leaderboard'
-  // },
+  leaderboard: {
+    title: 'Classificação',
+    url: '/leaderboard'
+  },
   // media: {
   //   title: 'Mídia',
   //   url: '/media'
@@ -23,4 +23,8 @@ export default {
   //   title: 'Entrar',
   //   url: '/login'
   // },
+  clubs: {
+    title: 'Times',
+    url: '/clubs'
+  },
 }

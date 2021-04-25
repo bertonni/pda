@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>PDA</title>
       </Head>
-      <NavBar />
+      <NavBar page={'home'} />
       <section className="bg-blue-450 flex items-center sm:justify-evenly
       justify-center py-10 sm:h-48 md:h-64 lg:h-72 text-gray-100">
         <img

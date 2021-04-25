@@ -30,7 +30,7 @@ export default function RankingTable({ headers, data }) {
           data.map((rowData, indexRow) => {
             return (
               <tr key={indexRow}
-                className="border-b border-gray-550 font-normal h-10
+                className="border-b border-gray-300 font-normal h-10
                   text-center hover:bg-gray-200">
                 {
                   rowData.map((item, indexData) => {
@@ -53,7 +53,7 @@ export default function RankingTable({ headers, data }) {
                       indexData == 2 ?
                       <td
                         key={indexData}
-                        onClick={() => {router.push('/team')}}
+                        onClick={() => {router.push('/clubs/' + item.toLowerCase())}}
                         className="text-center cursor-pointer"
                       >
                         <img src={`/images/${item}.svg`}

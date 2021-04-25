@@ -1,7 +1,7 @@
 import Head from "next/head";
-import NavBar from "../components/NavBar";
-import TeamHeader from "../components/TeamHeader";
-import TeamTable from "../components/TeamTable";
+import NavBar from "../../components/NavBar";
+import TeamHeader from "../../components/TeamHeader";
+import TeamTable from "../../components/TeamTable";
 
 export default function Team() {
 
@@ -27,7 +27,7 @@ export default function Team() {
       <Head>
         <title>Juventus</title>
       </Head>
-      <NavBar />
+      <NavBar page={'clubs'} club={'milan'} />
       <div className="w-full">
         <TeamHeader
           club="Juventus"

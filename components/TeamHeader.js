@@ -10,8 +10,8 @@ export default function TeamHeader({ club, captain }) {
         <div className="flex flex-col">
           <div className="flex">
             <span className="text-sm"><strong>Vitórias: </strong> 5</span>
-            <span className="ml-3 text-sm"><strong>Empates: </strong> 3</span>
-            <span className="ml-3 text-sm"><strong>Derrotas: </strong> 5</span>
+            <span className="ml-1 xs:ml-3 text-sm"><strong>Empates: </strong> 3</span>
+            <span className="ml-1 xs:ml-3 text-sm"><strong>Derrotas: </strong> 5</span>
           </div>
           <span className="text-sm"><strong>Capitão: </strong> { captain }</span>
         </div>
