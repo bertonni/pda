@@ -2,7 +2,6 @@ import links from "../utils/links";
 import { useRouter } from "next/router";
 
 export default function NavBar({ page, club }) {
-  console.log('club: ', club);
   const router = useRouter();
   const bg = club == 'juventus' ? 'bg-gray-800' : club == 'inter' ? 'bg-blue-700' :
     club == 'milan' ? 'bg-red-700' : club == 'roma' ? 'bg-yellow-600' : 'bg-blue-450';

@@ -1,6 +1,6 @@
-import Head from "next/head";
 import NavBar from "../components/NavBar";
 import RankingTable from "../components/RankingTable";
+import Head from "next/head";
 
 export default function Rankings() {
   const headerTopScore = ['#', 'Peladeiro', 'Equipe', 'Gols'];

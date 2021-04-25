@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
-import Image from 'next/image';
 
-export default function LeaderBoardTable({ headers, data }) {
+export default function LeaderboardTable({ headers, data }) {
   const router = useRouter();
   return (
     <div className="w-full">

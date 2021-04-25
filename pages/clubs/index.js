@@ -1,6 +1,6 @@
-import Head from "next/head";
 import ClubLogo from "../../components/ClubLogo";
 import NavBar from "../../components/NavBar";
+import Head from "next/head";
 
 export default function Clubs() {
   return (

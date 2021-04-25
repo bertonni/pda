@@ -1,7 +1,7 @@
-import Head from "next/head";
 import NavBar from "../../components/NavBar";
 import TeamHeader from "../../components/TeamHeader";
 import TeamTable from "../../components/TeamTable";
+import Head from "next/head";
 
 export default function Team() {
 
