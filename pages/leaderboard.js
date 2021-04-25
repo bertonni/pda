@@ -1,5 +1,5 @@
 import Head from "next/head";
-import LeaderBoardTable from "../components/LeaderBoardTable";
+import LeaderboardTable from "../components/LeaderBoardTable";
 import NavBar from '../components/NavBar';
 import Round from "../components/Round";
 
@@ -22,7 +22,7 @@ export default function Leaderboard() {
         <div className="flex flex-col w-full pt-4 sm:px-2">
           <h1 className="px-2 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Classificação</h1>
           <div className="sm:px-10 md:px-20 flex flex-col lg:flex-row">
-            <LeaderBoardTable
+            <LeaderboardTable
               headers={headers}
               data={teams}
             />
