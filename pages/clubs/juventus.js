@@ -3,7 +3,7 @@ import TeamHeader from "../../components/TeamHeader";
 import TeamTable from "../../components/TeamTable";
 import Head from "next/head";
 
-export default function Team() {
+export default function Juventus() {
 
   const headers = ['#', 'Peladeiro', 'Posição', 'Gols', 'Assist'];
   const players = [
@@ -33,7 +33,8 @@ export default function Team() {
           club="Juventus"
           captain="Pedro Henrique"
         />
-        <h1 className="px-3 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Peladeiros</h1>
+        <h1 className="px-3 sm:px-10 md:px-20 text-xl sm:text-2xl md:text-3xl
+        text-gray-550 pt-3 sm:pt-0">Peladeiros</h1>
         <TeamTable
           headers={headers}
           data={players}

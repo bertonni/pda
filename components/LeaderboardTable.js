@@ -58,7 +58,7 @@ export default function LeaderboardTable({ headers, data }) {
                             src={`/images/${item}.svg`}
                             height="auto"
                             width="auto"
-                            className="h-10 w-10 xs:mr-2"
+                            className="h-10 w-10 xs:mr-2 sm:h-12 sm:w-12"
                           />
                           <span className="hidden xs:block">{item}</span>
                         </td>

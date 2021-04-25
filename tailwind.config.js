@@ -5,11 +5,22 @@ module.exports = {
 
   theme: {
     extend: {
+      backgroundImage: theme => ({
+        'rom': "url('/images/roma_bg.png')",
+        'int': "url('/images/inter_bg.png')",
+        'mil': "url('/images/milan_bg.png')",
+        'juv': "url('/images/juventus_bg.png')",
+      }),
       colors: {
         'gray-150': '#E9EAF5',
         'gray-350': '#C4C8D9',
         'gray-550': '#45474D',
-        'blue-450': '#3068B2'
+        'blue-450': '#3068B2',
+        'inter-blue': '#1266AB',
+        'black': '#030000',
+        'roma-red': '#8E001C',
+        'roma-yellow': '#FFB300',
+        'milan-red': '#C90C0F',
       },
       screens: {
         'xs': '480px'
@@ -46,6 +57,14 @@ module.exports = {
       fontFamily: {
         'roboto': 'Roboto Mono',
         'montserrat': 'Montserrat'
+      },
+      zIndex: {
+        '10-': '-10',
+        '20-': '-20',
+        '30-': '-30',
+        '40-': '-40',
+        '50-': '-50',
+        '100-': '-100',
       }
     },
   },
