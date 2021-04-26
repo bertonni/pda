@@ -30,6 +30,10 @@ module.exports = {
       },
       minWidth: {
         '2': '0.5rem',
+        '2.5': '0.625rem',
+        '3': '0.75rem',
+        '3.5': '0.875rem',
+        '4': '1rem',
         '5': '1.25rem',
         '6': '1.5rem',
         '7': '1.75rem',
@@ -43,9 +47,14 @@ module.exports = {
         'inherit': 'inherit'
       },
       minHeight: {
-        '1': '0.25rem'
+        '1': '0.25rem',
+        '14': '3.5rem',
+        '24': '6.5rem',
+        '25': '6.75rem'
       },
       maxHeight: {
+        '94': '23.5rem',
+        '95': '23.75rem',
         '109': '27.25rem'
       },
       flexGrow: {

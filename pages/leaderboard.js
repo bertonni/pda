@@ -1,7 +1,7 @@
-import LeaderboardTable from "../components/LeaderboardTable";
-import NavBar from '../components/NavBar';
-import Round from "../components/Round";
 import Head from "next/head";
+import Round from "../components/Round";
+import NavBar from '../components/NavBar';
+import LeaderboardTable from "../components/LeaderboardTable";
 
 export default function Leaderboard() {
   const headers = ['#', 'Equipe', 'P', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', '%', 'Últimos Jogos'];
@@ -26,7 +26,7 @@ export default function Leaderboard() {
               headers={headers}
               data={teams}
             />
-            <Round  />
+            <Round />
           </div>
         </div>
       </div>
