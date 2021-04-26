@@ -18,28 +18,28 @@ export default function Clubs() {
               path="/images/Inter.svg"
             />
             <h1 className="text-gray-550 text-xl sm:text-3xl transition duration-100
-            transform group-hover:scale-125 mt-1">Inter</h1>
+            transform group-hover:scale-125 mt-3">Inter</h1>
           </div>
           <div className="flex flex-col items-center justify-center group pt-3">
             <ClubLogo
               path="/images/Milan.svg"
             />
             <h1 className="text-gray-550 text-xl sm:text-3xl transition duration-100
-            transform group-hover:scale-125 mt-1">Milan</h1>
+            transform group-hover:scale-125 mt-3">Milan</h1>
           </div>
           <div className="flex flex-col items-center justify-center group pt-3">
             <ClubLogo
               path="/images/Juventus.svg"
             />
             <h1 className="text-gray-550 text-xl sm:text-3xl transition duration-100
-            transform group-hover:scale-125 mt-1">Juventus</h1>
+            transform group-hover:scale-125 mt-3">Juventus</h1>
           </div>
           <div className="flex flex-col items-center justify-center group pt-3">
             <ClubLogo
               path="/images/Roma.svg"
             />
             <h1 className="text-gray-550 text-xl sm:text-3xl transition duration-100
-            transform group-hover:scale-125 mt-1">Roma</h1>
+            transform group-hover:scale-125 mt-3">Roma</h1>
           </div>
         </div>
       </div>

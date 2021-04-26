@@ -1,10 +1,11 @@
 export default function PlayerCard({ currPlayer }) {
+  let team = currPlayer.team.toLowerCase();
   return (
     <div className="p-2 md:p-4 w-full h-4/5 relative">
       <div className="flex">
         <img
           className="w-2/5 h-auto"
-          src={`/images/profilePictures/${currPlayer.number}.jpg`}
+          src={`/images/profilePictures/${team}/${currPlayer.number}.jpg`}
         />
         <div className="flex flex-col relative pl-3">
           <section className="border-b border-gray-400 w-44 sm:w-60 md:w-64 lg:w-80">

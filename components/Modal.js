@@ -18,10 +18,10 @@ export default function Modal({ active, closeModal, player }) {
                   currPlayer={player}
                 />
                 {/*footer*/}
-                <div className="flex items-center justify-center p-6 rounded-b">
+                <div className="flex items-center justify-center rounded-b">
                   <button
                     className="text-red-500 background-transparent font-bold
-                    uppercase px-6 py-2 text-sm outline-none focus:outline-none
+                    uppercase px-6 py-5 text-sm outline-none focus:outline-none
                     mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => closeModal()}

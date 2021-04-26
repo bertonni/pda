@@ -1,19 +1,14 @@
 import { useState } from "react";
-import playersData from '../utils/players.json';
 import Modal from "./Modal";
 
-export default function TeamTable({ headers, data }) {
+export default function TeamTable({ headers, data, players }) {
 
   const [isActive, setIsActive] = useState(false);
   const [currentPlayer, setCurrentPlayer] = useState(null);
-
-  // let divClass = "px-3 py-3 sm:px-10 flex justify-center";
-  // let tableClass = "border-collapse w-full sm:w-5/6 md:w-4/6";
-  // let divClassActive = "px-3 py-3 sm:px-10 flex justify-around";
-  // let tableClassActive = "border-collapse w-full sm:w-4/6 md:w-1/2";
+  let team = players[0].team.toLowerCase();
 
   function showPlayerData(index) {
-    setCurrentPlayer(playersData[index]);
+    setCurrentPlayer(players[index]);
     setIsActive(true);
   }
 
@@ -65,7 +60,7 @@ export default function TeamTable({ headers, data }) {
                           onClick={() => { showPlayerData(indexRow) }}
                         >
                           <img
-                            src={`/images/profilePictures/${rowData[indexData-1]}.jpg`}
+                            src={`/images/profilePictures/${team}/${rowData[indexData-1]}.jpg`}
                             className="hidden xs:block h-10 w-10 sm:h-12 sm:w-12 rounded-full mr-2"
                           />
                           {item}
