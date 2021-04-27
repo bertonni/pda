@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 import TeamHeader from "../../components/TeamHeader";
 import TeamTable from "../../components/TeamTable";
@@ -23,12 +24,12 @@ export default function Inter() {
   });
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>Inter</title>
       </Head>
       <NavBar page={'clubs'} club={'inter'} />
-      <div className="w-full">
+      <div className="w-full flex-grow">
         <TeamHeader
           club="Inter"
           captain="Agushow"
@@ -41,6 +42,7 @@ export default function Inter() {
           players={teamPlayersAllData}
         />
       </div>
+      <Footer />
     </div>
   )
 }

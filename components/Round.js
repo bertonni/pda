@@ -5,7 +5,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 
 export default function Round() {
   const allMatches = matches;
-  const [currentRound, setCurrentRound] = useState(allMatches[0]);
+  const [currentRound, setCurrentRound] = useState(allMatches[5]);
   const first = currentRound.game1.id === 0 ? 'text-gray-300 pointer-events-none' : '';
   const last = currentRound.game1.id === allMatches.length - 1 ? 'text-gray-300 pointer-events-none' : '';
 

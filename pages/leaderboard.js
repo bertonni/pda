@@ -2,6 +2,7 @@ import Head from "next/head";
 import Round from "../components/Round";
 import NavBar from '../components/NavBar';
 import LeaderboardTable from "../components/LeaderboardTable";
+import Footer from "../components/Footer";
 
 export default function Leaderboard() {
   const headers = ['#', 'Equipe', 'P', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', '%', 'Últimos Jogos'];
@@ -13,12 +14,12 @@ export default function Leaderboard() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>Classificação</title>
       </Head>
       <NavBar page={'leaderboard'} />
-      <div className="w-full">
+      <div className="w-full flex-grow">
         <div className="flex flex-col w-full pt-4 sm:px-2">
           <h1 className="px-2 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Classificação</h1>
           <div className="sm:px-10 md:px-20 flex flex-col lg:flex-row">
@@ -30,6 +31,7 @@ export default function Leaderboard() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

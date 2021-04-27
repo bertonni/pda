@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 import TeamHeader from "../../components/TeamHeader";
 import TeamTable from "../../components/TeamTable";
@@ -23,12 +24,12 @@ export default function Juventus() {
   });
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>Juventus</title>
       </Head>
       <NavBar page={'clubs'} club={'juventus'} />
-      <div className="w-full">
+      <div className="w-full flex-grow">
         <TeamHeader
           club="Juventus"
           captain="Pedro Henrique"
@@ -41,6 +42,7 @@ export default function Juventus() {
           players={teamPlayersAllData}
         />
       </div>
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import NavBar from "../components/NavBar";
 import RankingTable from "../components/RankingTable";
 import Head from "next/head";
+import Footer from "../components/Footer";
 
 export default function Rankings() {
   const headerTopScore = ['#', 'Peladeiro', 'Equipe', 'Gols'];
@@ -30,11 +31,11 @@ export default function Rankings() {
     ['10', 'Roninho-Meio-19', 'Milan', '2'],
   ];
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>Rankings</title>
       </Head>
-      <div className="w-full">
+      <div className="w-full flex-grow">
         <NavBar page={'rankings'} />
         <div className="flex flex-col sm:flex-row">
           <div className="flex flex-col w-full pt-4">
@@ -57,6 +58,7 @@ export default function Rankings() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
