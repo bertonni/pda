@@ -6,11 +6,14 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 export default function Round() {
   const allMatches = matches;
   const [currentRound, setCurrentRound] = useState(allMatches[5]);
-  const first = currentRound.game1.id === 0 ? 'text-gray-300 pointer-events-none' : '';
-  const last = currentRound.game1.id === allMatches.length - 1 ? 'text-gray-300 pointer-events-none' : '';
+  const first = currentRound.game1.id === 0 ?
+    'text-gray-300 pointer-events-none' : '';
+  const last = currentRound.game1.id === allMatches.length - 1 ? 
+    'text-gray-300 pointer-events-none' : '';
 
   function handleCurrentRound(round) {
-    round = round < 0 ? 0 : round > allMatches.length - 1 ? allMatches.length - 1 : round;
+    round = round < 0 ? 0 : round > allMatches.length - 1 ?
+      allMatches.length - 1 : round;
     setCurrentRound(allMatches[round]);
   }
 
@@ -23,14 +26,12 @@ export default function Round() {
         border-gray-350 h-9">
           <ChevronLeftIcon
             onClick={() => {handleCurrentRound(currentRound.game1.id - 1)}}
-            className={`cursor-pointer transition duration-100 transform
-          hover:scale-125 h-8 ${first}`}
+            className={`cursor-pointer hover:text-gray-400 h-8 ${first}`}
           />
           <h2>{currentRound.game1.title}</h2>
           <ChevronRightIcon
             onClick={() => {handleCurrentRound(currentRound.game1.id + 1)}}
-            className={`cursor-pointer transition duration-100 transform
-          hover:scale-125 h-8 ${last}`}
+            className={`cursor-pointer hover:text-gray-400 h-8 ${last}`}
           />
         </div>
         <div className="flex flex-col w-full max-w-xs min-w-72 sm:min-w-80

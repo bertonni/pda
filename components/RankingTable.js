@@ -53,7 +53,9 @@ export default function RankingTable({ headers, data }) {
                       indexData == 2 ?
                       <td
                         key={indexData}
-                        onClick={() => {router.push('/clubs/' + item.toLowerCase())}}
+                        onClick={() => {
+                          router.push('/clubs/' + item.toLowerCase());
+                        }}
                         className="text-center cursor-pointer"
                       >
                         <img src={`/images/${item}.svg`}

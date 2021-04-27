@@ -33,6 +33,9 @@ export default function Roma() {
         <TeamHeader
           club="Roma"
           captain="Emílio"
+          wins={5}
+          draws={3}
+          loses={7}
         />
         <h1 className="px-3 sm:px-10 md:px-20 text-xl sm:text-2xl md:text-3xl
         text-gray-550 pt-3 sm:pt-0">Peladeiros</h1>

@@ -7,7 +7,8 @@ export default function Modal({ active, closeModal, player }) {
         <>
           <div
             className="justify-start items-start mt-10 flex overflow-x-hidden
-            overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none w-full"
+            overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none
+            w-full"
           >
             <div className="relative w-auto sm:w-4/6 my-6 mx-auto max-w-lg">
               {/*content*/}

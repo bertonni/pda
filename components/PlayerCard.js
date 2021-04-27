@@ -9,8 +9,12 @@ export default function PlayerCard({ currPlayer }) {
         />
         <div className="flex flex-col relative pl-3">
           <section className="border-b border-gray-400 w-44 sm:w-60 md:w-64">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl">{currPlayer.name}</h2>
-            <span className="my-0 text-sm sm:text-base">{currPlayer.position}</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl">
+              {currPlayer.name}
+            </h2>
+            <span className="my-0 text-sm sm:text-base">
+              {currPlayer.position}
+            </span>
           </section>
           <section className="flex flex-col py-2 border-b border-gray-400">
             <div className="flex justify-start">

@@ -8,8 +8,9 @@ export default function NavBar({ page, club }) {
 
   return (
     <nav className="relative bg-transparent z-100">
-      <div className={`h-12 xs:h-12 flex px-6 xs:px-10 text-lg xs:text-xl ${bg} items-center
-      overflow-x-scroll space-x-6 xs:space-x-12 scrollbar-hide whitespace-nowrap text-gray-100`}>
+      <div className={`h-12 xs:h-12 flex px-6 xs:px-10 text-lg xs:text-xl ${bg} 
+      items-center overflow-x-scroll space-x-6 xs:space-x-12 scrollbar-hide 
+      whitespace-nowrap text-gray-100`}>
         {Object.entries(links).map(([key, { title, url }]) => {
           return <h2
             key={key}

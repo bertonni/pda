@@ -24,7 +24,8 @@ export default function LeaderboardTable({ headers, data }) {
                   :
                   indexHeader%2 == 0 && indexHeader != 0?
                   <th key={indexHeader}
-                    className="text-center text-sm font-light min-w-5 sm:min-w-8 bg-gray-150">
+                    className="text-center text-sm font-light min-w-5 sm:min-w-8
+                     bg-gray-150">
                     {header}
                   </th>
                   :
@@ -51,8 +52,11 @@ export default function LeaderboardTable({ headers, data }) {
                         indexData == 1 ?
                         <td
                           key={keyData}
-                          className="text-left pl-2 cursor-pointer flex justify-start xs:items-center"
-                          onClick={() => {router.push('/clubs/' + item.toLowerCase())}}
+                          className="text-left pl-2 cursor-pointer flex
+                          justify-start xs:items-center"
+                          onClick={() => {
+                            router.push('/clubs/' + item.toLowerCase())
+                          }}
                         >
                           <img
                             src={`/images/${item}.svg`}
