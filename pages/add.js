@@ -76,15 +76,15 @@ export default function Add() {
 
   // }, [])
 
-  // const sendPlayer = (e) => {
-  //   e.preventDefault();
+  const sendPlayer = (e) => {
+    e.preventDefault();
 
-  //   db.collection('players')
-  //     .add(playerData)
-  //     .then(setAddedSuccess(true))
-  //     .then(clearForm())
-  //     .catch(Error('error'));
-  // };
+    db.collection('players')
+      .add(playerData)
+      .then(setAddedSuccess(true))
+      .then(clearForm())
+      .catch(Error('error'));
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
