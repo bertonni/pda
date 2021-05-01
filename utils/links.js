@@ -19,12 +19,16 @@ export default {
   //   title: 'Mídia',
   //   url: '/media'
   // },
-  // login: {
-  //   title: 'Entrar',
-  //   url: '/login'
-  // },
   clubs: {
     title: 'Times',
     url: '/clubs'
   },
+  signin: {
+    title: 'Entrar',
+    url: '/signin'
+  },
+  // signup: {
+  //   title: 'Cadastro',
+  //   url: '/signup'
+  // },
 }

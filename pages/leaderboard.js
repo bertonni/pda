@@ -13,6 +13,7 @@ export default function Leaderboard() {
     ['4', 'Milan', '18', '15', '5', '3', '7', '22', '26', '-4', '40', 'last']
   ];
 
+
   return (
     <div className="flex flex-col min-h-screen">
       <Head>
@@ -21,7 +22,7 @@ export default function Leaderboard() {
       <NavBar page={'leaderboard'} />
       <div className="w-full flex-grow">
         <div className="flex flex-col w-full pt-4 sm:px-2">
-          <h1 className="px-2 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Classificação</h1>
+          <h1 className="px-2 pb-4 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Classificação</h1>
           <div className="sm:px-10 md:px-20 flex flex-col lg:flex-row">
             <LeaderboardTable
               headers={headers}

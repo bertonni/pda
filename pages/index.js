@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+  <div className="flex flex-col min-h-screen">
       <Head>
         <title>PDA</title>
       </Head>
@@ -23,7 +23,7 @@ export default function Home() {
           </div>
         </section>
         <section className="px-4 py-4 sm:py-6">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl md:pl-10 lg:pl-16 pb-4">Equipes</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl md:pl-10 lg:pl-16 pb-4 text-center md:text-left">Equipes</h1>
           <div className="flex flex-wrap xs:flex-nowrap items-center justify-evenly">
             <ClubLogo path='/images/Inter.svg' />
             <ClubLogo path='/images/Milan.svg' />
@@ -32,7 +32,7 @@ export default function Home() {
           </div>
         </section>
         <section className="px-4 py-6 md:px-10 lg:px-20 bg-blue-450 flex flex-col">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl text-white">Premiações</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl text-white text-center md:text-left">Premiações</h1>
           <div className="flex flex-wrap items-center justify-evenly">
             <div className="flex flex-col items-center mt-10">
               <span className="mb-2 text-white sm:text-lg lg:text-xl">2º Colocado</span>
