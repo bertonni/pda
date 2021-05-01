@@ -17,7 +17,7 @@ export default function NavBar({ page, club }) {
           <h2
             key={key}
             onClick={() => router.push(url)}
-            className={`last:pr-4 cursor-pointer hover:opacity-75 bg-red-400 
+            className={`last:pr-4 cursor-pointer hover:opacity-75 
             ${page == key ? 'text-yellow-300' : ''} `}
           >
             {title}
