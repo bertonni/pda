@@ -9,7 +9,7 @@ import { useAuth } from "../contexts/AuthContext";
 export default function Signup() {
   const formRef = useRef();
  
-  const { signup } = useAuth();
+  //const { signup } = useAuth();
 
   const handleSubmit = (e) => {
     e.preventDefault();
