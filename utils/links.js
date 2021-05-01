@@ -23,10 +23,10 @@ export default {
     title: 'Times',
     url: '/clubs'
   },
-  signin: {
-    title: 'Entrar',
-    url: '/signin'
-  },
+  // signin: {
+  //   title: 'Entrar',
+  //   url: '#'
+  // },
   // signup: {
   //   title: 'Cadastro',
   //   url: '/signup'
