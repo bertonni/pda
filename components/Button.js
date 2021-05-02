@@ -1,4 +1,4 @@
-export default function Button({ type, background, text, handle }) {
+export default function Button({ type, background, text }) {
   const colors = (background == 'primary') ?
     'bg-blue-450 text-white' : 
     (background == 'success') ?

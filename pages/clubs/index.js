@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar";
 import Head from "next/head";
 import Footer from "../../components/Footer";
 
-export default function Clubs({ team }) {
+export default function Clubs() {
 
   const teams = ['Inter', 'Milan', 'Juventus', 'Roma'];
   return (
@@ -13,8 +13,11 @@ export default function Clubs({ team }) {
       </Head>
       <NavBar page="clubs" />
       <div className="pt-4 flex flex-col flex-grow">
-        <h1 className="px-2 sm:px-10 md:px-20 text-2xl sm:text-2xl
-        text-gray-550 text-center md:text-left"> Equipes </h1>
+        <h1
+          className="px-2 sm:px-10 md:px-20 text-2xl sm:text-2xl text-gray-550
+           text-center md:text-left">
+          Equipes
+        </h1>
         <div className="flex items-center flex-wrap xs:flex-nowrap 
           justify-evenly sm:px-10 md:px-20">
           {teams.map((team, index) => {
@@ -35,11 +38,3 @@ export default function Clubs({ team }) {
     </div>
   )
 }
-
-// export function getServerSideProps({ query }) {
-//   const team = query.team;
-
-//   return {
-//     props: {team}, // will be passed to the page component as props
-//   }
-// }

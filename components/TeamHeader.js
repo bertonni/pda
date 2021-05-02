@@ -1,4 +1,5 @@
-export default function TeamHeader({ club, captain, wins, draws, loses }) {
+export default function TeamHeader({ club, captain, wins, draws, losses }) {
+  
   let bg_int = "absolute top-0 left-0 bg-int-header bg-cover bg-center h-44 w-full -mt-12 z-100-";
   let bg_mil = "absolute top-0 left-0 bg-mil-header bg-cover bg-center h-44 w-full -mt-12 z-100-";
   let bg_juv = "absolute top-0 left-0 bg-juv-header bg-cover bg-center h-44 w-full -mt-12 z-100-";
@@ -31,7 +32,7 @@ export default function TeamHeader({ club, captain, wins, draws, loses }) {
             <span className="ml-1 xs:ml-3 text-sm sm:text-base text-gray-100">
               <strong className="xs:hidden pl-3 pr-1">D: </strong>
               <strong className="hidden xs:inline-block pr-1">
-                Derrotas: </strong> { loses }
+                Derrotas: </strong> { losses }
             </span>
           </div>
           <span className="text-sm sm:text-base text-gray-100">

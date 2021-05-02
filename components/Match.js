@@ -1,5 +1,4 @@
-import { useRouter, withRouter } from "next/router"
-import { useState } from "react";
+import { useRouter } from "next/router"
 
 export default function Match(props) {
   const router = useRouter();
@@ -12,12 +11,10 @@ export default function Match(props) {
   const status = props.status.toUpperCase() == 'ABERTO' ?
   `${props.date} - ${props.time}` : props.status;
 
-  const [matchDetails, setMatchDetails] = useState(props);
-
   return (
     <div className="flex flex-col items-center border-b border-gray-300
       min-h-25 hover:bg-gray-150 cursor-pointer group px-2"
-      onClick={() => {router.push('/match')}}
+      onClick={() => {router.push(`/match/${props.matchId}`)}}
     >
       <h3 className="pt-1 text-2xs md:text-xs">{header}</h3>
       <div className="w-full flex item-center justify-between min-h-14">

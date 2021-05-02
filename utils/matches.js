@@ -3,6 +3,7 @@ export default [
     game1: {
       id: 0,
       title: "RODADA 1",
+      matchId: 'r1g1',
       date: "DOM. 07/02",
       time: "05:45",
       location: "MARIÁPOLIS",
@@ -13,6 +14,7 @@ export default [
       status: "encerrado"
     },
     game2: {
+      matchId: 'r1g2',
       date: "DOM. 07/02",
       time: "06:05",
       location: "MARIÁPOLIS",
@@ -23,6 +25,7 @@ export default [
       status: "encerrado",
     },
     game3: {
+      matchId: 'r1g3',
       date: "DOM. 07/02",
       time: "06:25",
       location: "MARIÁPOLIS",
@@ -33,6 +36,7 @@ export default [
       status: "encerrado",
     },
     game4: {
+      matchId: 'r1g4',
       date: "DOM. 07/02",
       time: "06:45",
       location: "MARIÁPOLIS",
@@ -43,6 +47,7 @@ export default [
       status: "encerrado",
     },
     game5: {
+      matchId: 'r1g5',
       date: "DOM. 07/02",
       time: "07:05",
       location: "MARIÁPOLIS",
@@ -53,6 +58,7 @@ export default [
       status: "encerrado",
     },
     game6: {
+      matchId: 'r1g6',
       date: "DOM. 07/02",
       time: "07:25",
       location: "MARIÁPOLIS",
@@ -67,6 +73,7 @@ export default [
     game1: {
       id: 1,
       title: "RODADA 2",
+      matchId: 'r2g1',
       date: "DOM. 14/02",
       time: "05:45",
       location: "MARIÁPOLIS",
@@ -77,6 +84,7 @@ export default [
       status: "encerrado"
     },
     game2: {
+      matchId: 'r2g2',
       date: "DOM. 14/02",
       time: "06:05",
       location: "MARIÁPOLIS",
@@ -87,6 +95,7 @@ export default [
       status: "encerrado",
     },
     game3: {
+      matchId: 'r2g3',
       date: "DOM. 14/02",
       time: "06:25",
       location: "MARIÁPOLIS",
@@ -97,6 +106,7 @@ export default [
       status: "encerrado",
     },
     game4: {
+      matchId: 'r2g4',
       date: "DOM. 14/02",
       time: "06:45",
       location: "MARIÁPOLIS",
@@ -107,6 +117,7 @@ export default [
       status: "encerrado",
     },
     game5: {
+      matchId: 'r2g5',
       date: "DOM. 14/02",
       time: "07:05",
       location: "MARIÁPOLIS",
@@ -117,6 +128,7 @@ export default [
       status: "encerrado",
     },
     game6: {
+      matchId: 'r2g6',
       date: "DOM. 14/02",
       time: "07:25",
       location: "MARIÁPOLIS",
@@ -131,6 +143,7 @@ export default [
     game1: {
       id: 2,
       title: "RODADA 3",
+      matchId: 'r3g1',
       date: "DOM. 21/02",
       time: "05:45",
       location: "MARIÁPOLIS",
@@ -141,6 +154,7 @@ export default [
       status: "encerrado"
     },
     game2: {
+      matchId: 'r3g2',
       date: "DOM. 21/02",
       time: "06:05",
       location: "MARIÁPOLIS",
@@ -151,6 +165,7 @@ export default [
       status: "encerrado",
     },
     game3: {
+      matchId: 'r3g3',
       date: "DOM. 21/02",
       time: "06:25",
       location: "MARIÁPOLIS",
@@ -161,6 +176,7 @@ export default [
       status: "encerrado",
     },
     game4: {
+      matchId: 'r3g4',
       date: "DOM. 21/02",
       time: "06:45",
       location: "MARIÁPOLIS",
@@ -171,6 +187,7 @@ export default [
       status: "encerrado",
     },
     game5: {
+      matchId: 'r3g5',
       date: "DOM. 21/02",
       time: "07:05",
       location: "MARIÁPOLIS",
@@ -181,6 +198,7 @@ export default [
       status: "encerrado",
     },
     game6: {
+      matchId: 'r3g6',
       date: "DOM. 21/02",
       time: "07:25",
       location: "MARIÁPOLIS",
@@ -195,6 +213,7 @@ export default [
     game1: {
       id: 3,
       title: "RODADA 4",
+      matchId: 'r4g1',
       date: "DOM. 28/02",
       time: "05:45",
       location: "MARIÁPOLIS",
@@ -205,6 +224,7 @@ export default [
       status: "encerrado"
     },
     game2: {
+      matchId: 'r4g2',
       date: "DOM. 28/02",
       time: "06:05",
       location: "MARIÁPOLIS",
@@ -215,6 +235,7 @@ export default [
       status: "encerrado",
     },
     game3: {
+      matchId: 'r4g3',
       date: "DOM. 28/02",
       time: "06:25",
       location: "MARIÁPOLIS",
@@ -225,6 +246,7 @@ export default [
       status: "encerrado",
     },
     game4: {
+      matchId: 'r4g4',
       date: "DOM. 28/02",
       time: "06:45",
       location: "MARIÁPOLIS",
@@ -235,6 +257,7 @@ export default [
       status: "em andamento",
     },
     game5: {
+      matchId: 'r4g5',
       date: "DOM. 28/02",
       time: "07:05",
       location: "MARIÁPOLIS",
@@ -245,6 +268,7 @@ export default [
       status: "encerrado",
     },
     game6: {
+      matchId: 'r4g6',
       date: "DOM. 28/02",
       time: "07:25",
       location: "MARIÁPOLIS",
@@ -259,6 +283,7 @@ export default [
     game1: {
       id: 4,
       title: "RODADA 5",
+      matchId: 'r5g1',
       date: "DOM. 04/04",
       time: "05:45",
       location: "MARIÁPOLIS",
@@ -269,6 +294,7 @@ export default [
       status: "encerrado"
     },
     game2: {
+      matchId: 'r5g2',
       date: "DOM. 04/04",
       time: "06:05",
       location: "MARIÁPOLIS",
@@ -279,6 +305,7 @@ export default [
       status: "encerrado",
     },
     game3: {
+      matchId: 'r5g3',
       date: "DOM. 04/04",
       time: "06:25",
       location: "MARIÁPOLIS",
@@ -289,6 +316,7 @@ export default [
       status: "encerrado",
     },
     game4: {
+      matchId: 'r5g4',
       date: "DOM. 04/04",
       time: "06:45",
       location: "MARIÁPOLIS",
@@ -299,6 +327,7 @@ export default [
       status: "encerrado",
     },
     game5: {
+      matchId: 'r5g5',
       date: "DOM. 04/04",
       time: "07:05",
       location: "MARIÁPOLIS",
@@ -309,6 +338,7 @@ export default [
       status: "encerrado",
     },
     game6: {
+      matchId: 'r5g6',
       date: "DOM. 04/04",
       time: "07:25",
       location: "MARIÁPOLIS",
@@ -323,6 +353,7 @@ export default [
     game1: {
       id: 5,
       title: "RODADA 6",
+      matchId: 'r6g1',
       date: "DOM. 11/04",
       time: "05:45",
       location: "MARIÁPOLIS",
@@ -333,6 +364,7 @@ export default [
       status: "aberto"
     },
     game2: {
+      matchId: 'r6g2',
       date: "DOM. 11/04",
       time: "06:05",
       location: "MARIÁPOLIS",
@@ -343,6 +375,7 @@ export default [
       status: "aberto",
     },
     game3: {
+      matchId: 'r6g3',
       date: "DOM. 11/04",
       time: "06:25",
       location: "MARIÁPOLIS",
@@ -353,6 +386,7 @@ export default [
       status: "aberto",
     },
     game4: {
+      matchId: 'r6g4',
       date: "DOM. 11/04",
       time: "06:45",
       location: "MARIÁPOLIS",
@@ -363,6 +397,7 @@ export default [
       status: "aberto",
     },
     game5: {
+      matchId: 'r6g5',
       date: "DOM. 11/04",
       time: "07:05",
       location: "MARIÁPOLIS",
@@ -373,6 +408,7 @@ export default [
       status: "aberto",
     },
     game6: {
+      matchId: 'r6g6',
       date: "DOM. 11/04",
       time: "07:25",
       location: "MARIÁPOLIS",
