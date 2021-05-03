@@ -32,15 +32,15 @@ export default function Match(props) {
           </span>
           <span className="font-roboto"> x </span>
           <span className="font-roboto text-2xl ml-2 mr-3 min-w-3.5">
-            {props.visitorScore == '' ? '-' : props.visitorScore}
+            {props.awayScore == '' ? '-' : props.awayScore}
           </span>
         </div>
         <div className="flex items-center">
-          <img src={`/images/${props.visitor}.svg`}
+          <img src={`/images/${props.away}.svg`}
             className="h-11 w-11 sm:h-12 sm:w-12"
           />
           <span className="font-roboto uppercase pr-1 pl-3 text-2xl">
-            {props.visitor.substr(0,3)}
+            {props.away.substr(0,3)}
           </span>
         </div>
       </div>

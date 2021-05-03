@@ -37,16 +37,16 @@ export default function Round() {
         <div className="flex flex-col w-full max-w-xs min-w-72 sm:min-w-80
         overflow-auto scrollbar-hide max-h-96">
           {Object.entries(currentRound).map(([key, { matchId, date, time, location, home,
-          visitor, homeScore, visitorScore, status }]) => {
+          away, homeScore, awayScore, status }]) => {
             return <div key={key}>
               <Match
                 date={date}
                 time={time}
                 location={location}
                 home={home}
-                visitor={visitor}
+                away={away}
                 homeScore={homeScore}
-                visitorScore={visitorScore}
+                awayScore={awayScore}
                 status={status}
                 matchId={matchId}
               />

@@ -10,7 +10,7 @@ module.exports = {
         'int-header': "url('/images/inter_bg.png')",
         'mil-header': "url('/images/milan_bg.png')",
         'juv-header': "url('/images/juventus_bg.png')",
-        'field': "url('/images/campo.png')"
+        'field': "url('/images/stadium.jpg')"
       }),
       colors: {
         'gray-150': '#E9EAF5',

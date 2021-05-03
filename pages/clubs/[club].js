@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 import TeamHeader from "../../components/TeamHeader";
@@ -45,7 +44,7 @@ export default function Club() {
       default:
         break;
     }
-
+          
     Object.entries(allPlayers).map((player) => {
       if (player[1].team.toLowerCase() === club.toLowerCase()) {
         teamPlayersAllData.push(player[1]);
