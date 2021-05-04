@@ -6,7 +6,7 @@ export default function RankingTable({ headers, data }) {
   return (
     <table className="border-collapse w-full">
       <thead>
-        <tr className="border-b-3 border-gray-350 font-light h-9">
+        <tr className="border-b-3 border-gray-350 font-light h-9 bg-white">
           {
             headers.map((header, indexHeader) => {
               return (
@@ -31,7 +31,7 @@ export default function RankingTable({ headers, data }) {
             return (
               <tr key={indexRow}
                 className="border-b border-gray-300 font-normal h-10
-                  text-center hover:bg-gray-200">
+                  text-center bg-white hover:bg-gray-200">
                 {
                   rowData.map((item, indexData) => {
                     let newData = '';

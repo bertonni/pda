@@ -13,7 +13,7 @@ export default function MatchMoreDetails({ handle, lineups, details }) {
         >
           Escalação
         </h2>
-        <h2 className={` xs:hover:bg-gray-150 cursor-pointer py-2 
+        <h2 className={`xs:hover:bg-gray-150 cursor-pointer py-2 
           text-center text-gray-550 border-b-3 ${detailsBorder}`}
           onClick={() => handle('details')}
         >

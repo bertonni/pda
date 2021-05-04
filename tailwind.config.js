@@ -10,7 +10,11 @@ module.exports = {
         'int-header': "url('/images/inter_bg.png')",
         'mil-header': "url('/images/milan_bg.png')",
         'juv-header': "url('/images/juventus_bg.png')",
-        'field': "url('/images/stadium.jpg')"
+        'field': "url('/images/stadium.jpg')",
+        'white-field': "url('/images/white_field.svg')",
+        'texture': "url('/images/bg_texture.png')",
+        'texture-svg': "url('/images/bg_texture.svg')",
+        'lineup': "url('/images/campo.png')"
       }),
       colors: {
         'gray-150': '#E9EAF5',
@@ -40,6 +44,11 @@ module.exports = {
         '7': '1.75rem',
         '8': '2rem',
         '9': '2.25rem',
+        '10': '2.5rem',
+        '11': '2.75rem',
+        '12': '3rem',
+        '14': '3.5rem',
+        '24': '6rem',
         '72': '18rem',
         '76': '19rem',
         '80': '20rem'

@@ -2,6 +2,7 @@ export default {
   juventus: {
     name: "Juventus",
     captain: "Pedro Henrique",
+    formation: '2-2-2',
     played: 15,
     wins: 7,
     draws: 3,
@@ -15,6 +16,7 @@ export default {
   roma: {
     name: "Roma",
     captain: "Emílio",
+    formation: '2-2-2',
     played: 15,
     wins: 7,
     draws: 3,
@@ -28,6 +30,7 @@ export default {
   milan: {
     name: "Milan",
     captain: "Bança",
+    formation: '3-2-1',
     played: 15,
     wins: 5,
     draws: 3,
@@ -41,6 +44,7 @@ export default {
   inter: {
     name: "Inter",
     captain: "Agushow",
+    formation: '2-2-2',
     played: 15,
     wins: 5,
     draws: 3,

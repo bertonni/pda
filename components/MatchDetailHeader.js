@@ -15,7 +15,7 @@ export default function MatchDetailHeader({ match }) {
   if (match.away === "Juventus") match.away = 'Juventus_inverted';
   
   return (
-    <>
+    <div className="flex flex-col items-center">
       <div className="min-h-14 flex flex-col items-center justify-center">
         <span className="font-semibold text-white ">{match.location}</span>
         <span className="font-semibold text-white text-sm">{match.date} - {match.time}</span>
@@ -50,6 +50,6 @@ export default function MatchDetailHeader({ match }) {
           </span>
         </div>
       </div>
-    </>
+    </div>
   )
 }

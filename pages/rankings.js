@@ -49,7 +49,7 @@ export default function Rankings() {
           </div>
           <div className="flex flex-col w-full pt-4">
             <h1 className="px-3 text-xl lg:px-5 sm:text-2xl text-gray-550">Assistências</h1>
-            <div className="px-3 py-3 sm:pr-10 lg:pr-20 lg:pl-5 flex justify-center">
+            <div className="px-3 py-3 sm:pr-10 lg:pr-20 lg:pl-5 flex justify-center mb-6">
               <RankingTable
                 headers={headerAssists}
                 data={bodyAssists}

@@ -19,8 +19,8 @@ export default function Details() {
   if (!id) return null;
 
   function handleClick(value) {
-    if (value === 'lineup') { setShowLineups(true); setShowDetails(false); }
-    if (value === 'details') { setShowDetails(true); setShowLineups(false); }
+    if (value === 'lineup') { setShowLineups(!showLineups); setShowDetails(false); }
+    if (value === 'details') { setShowDetails(!showDetails); setShowLineups(false); }
     return;
   }
 

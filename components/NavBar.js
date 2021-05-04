@@ -5,7 +5,7 @@ export default function NavBar({ page, club }) {
 
   const router = useRouter();
   const bg = club == 'juventus' || club == 'inter' || club == 'milan'
-    || club == 'roma' ? 'bg-transparent' : 'bg-blue-450';
+    || club == 'roma' ? 'bg-transparent' : 'bg-gradient-to-r from-blue-450 via-blue-700 to-blue-800';
 
   return (
     <nav className="relative bg-transparent z-100">

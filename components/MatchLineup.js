@@ -1,10 +1,25 @@
 import { useState } from 'react';
 import allPlayers from '../utils/players.json';
+import clubs from '../utils/clubs';
+import Lineup from './Lineup';
 
 export default function MatchLineup({ home, away }) {
 
-  const homeTeamPlayers = []
-  const awayTeamPlayers = []
+  const homeTeamPlayers = [];
+  const awayTeamPlayers = [];
+
+  let homeImg = home == "Juventus" ? "Juventus_inverted" : home;
+  let awayImg = away == "Juventus" ? "Juventus_inverted" : away;
+  let homeFormation;
+  let awayFormation;
+
+  Object.entries(clubs).map(([key, { formation }]) => {
+    if (key === home.toLowerCase()) { homeFormation = formation; return; }
+  });
+
+  Object.entries(clubs).map(([key, { formation }]) => {
+    if (key === away.toLowerCase()) { awayFormation = formation; return; }
+  });
 
   const [homeIsActive, setHomeIsActive] = useState(true);
   const [awayIsActive, setAwayIsActive] = useState(false);
@@ -23,19 +38,18 @@ export default function MatchLineup({ home, away }) {
 
   function handleClick(value) {
     if (value == 'home') {
-      setHomeIsActive(true);
-      setAwayIsActive(false);
+      setHomeIsActive(!homeIsActive);
+      setAwayIsActive(!awayIsActive);
     }
     if (value == 'away') {
-      setAwayIsActive(true);
-      setHomeIsActive(false);
+      setAwayIsActive(!awayIsActive);
+      setHomeIsActive(!homeIsActive);
     }
   }
 
   let bgHome, bgAway;
-  home = home == "Juventus" ? "Juventus_inverted" : home;
   
-  if (home == "Juventus_inverted") bgHome = 'bg-black';
+  if (home == "Juventus") bgHome = 'bg-black';
   else if (home == "Inter") bgHome = 'bg-inter-blue';
   else if (home == "Roma") bgHome = 'bg-roma-red';
   else bgHome = 'bg-milan-red';
@@ -47,33 +61,51 @@ export default function MatchLineup({ home, away }) {
 
   return (
     <div className="mt-4">
-      <div className="flex items-center justify-center">
-        <div className={`flex items-center justify-start mr-px py-2 
-          pl-4 w-full ${bgHome} ${homeActive} cursor-pointer md:hidden`}
+      <div className="flex items-center justify-center md:hidden">
+        <div className={`flex items-center justify-start mr-px py-1 
+          pl-2 w-full ${bgHome} ${homeActive} cursor-pointer md:hidden`}
           onClick={() => { handleClick('home') }}
         >
-          <img src={`/images/${home}.svg`} 
+          <img src={`/images/${homeImg}.svg`} 
             height="auto"
             width="auto"
             className="h-10 w-10"
           />
-          <span className="text-white">
-            {home = home == "Juventus_inverted" ? "Juventus" : home}
+          <span className="text-white ml-2">
+            {homeFormation}
           </span>
         </div>
-        <div className={`flex items-center justify-end ml-px py-2 
-          pr-4 w-full ${bgAway} ${awayActive} cursor-pointer md:hidden`}
+        <div className={`flex items-center justify-end ml-px py-1 
+          pr-2 w-full ${bgAway} ${awayActive} cursor-pointer md:hidden`}
           onClick={() => { handleClick('away') }}
         >
-          <span className="text-white">
-            {away}
+          <span className="text-white mr-2">
+            {awayFormation}
           </span>
-          <img src={`/images/${away == "Juventus" ? "Juventus_inverted" : away}.svg`} 
+          <img src={`/images/${awayImg}.svg`} 
             height="auto"
             width="auto"
             className="h-10 w-10"
           />
         </div>
+      </div>
+      <div className="w-full pt-4 min-h-full min-w-72">
+        {
+          homeIsActive &&
+          <Lineup
+            team={home}
+            formation={homeFormation}
+            players={homeTeamPlayers}
+          />
+        }
+        {
+          awayIsActive &&
+          <Lineup
+            team={away}
+            formation={awayFormation}
+            players={awayTeamPlayers}
+          />
+        }
       </div>
     </div>
   )
