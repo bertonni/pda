@@ -38,12 +38,12 @@ export default function MatchLineup({ home, away }) {
 
   function handleClick(value) {
     if (value == 'home') {
-      setHomeIsActive(!homeIsActive);
-      setAwayIsActive(!awayIsActive);
+      setHomeIsActive(true);
+      setAwayIsActive(false);
     }
     if (value == 'away') {
-      setAwayIsActive(!awayIsActive);
-      setHomeIsActive(!homeIsActive);
+      setAwayIsActive(true);
+      setHomeIsActive(false);
     }
   }
 
