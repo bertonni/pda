@@ -1,17 +1,45 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import allPlayers from '../utils/players.json';
 import clubs from '../utils/clubs';
 import Lineup from './Lineup';
 
+function useIsMountedRef() {
+  const isMountedRef = useRef(null);
+
+  useEffect(() => {
+    isMountedRef.current = true;
+    return () => isMountedRef.current = false;
+  });
+  return isMountedRef;
+}
+
 export default function MatchLineup({ home, away }) {
 
+  const [homeIsActive, setHomeIsActive] = useState(true);
+  const [awayIsActive, setAwayIsActive] = useState(false);
+
+  const homeActive = !homeIsActive ? 'opacity-60' : '';
+  const awayActive = !awayIsActive ? 'opacity-60' : '';
   const homeTeamPlayers = [];
   const awayTeamPlayers = [];
+
+  const isMountedRef = useIsMountedRef();
 
   let homeImg = home == "Juventus" ? "Juventus_inverted" : home;
   let awayImg = away == "Juventus" ? "Juventus_inverted" : away;
   let homeFormation;
   let awayFormation;
+
+  let mql = window.matchMedia('(min-width: 768px)');
+
+  mql.addEventListener("change", (e) => {
+    if (e.matches) {
+      setHomeIsActive(true);
+      setAwayIsActive(true);
+    } else {
+      setAwayIsActive(false);
+    }
+  })
 
   Object.entries(clubs).map(([key, { formation }]) => {
     if (key === home.toLowerCase()) { homeFormation = formation; return; }
@@ -20,12 +48,6 @@ export default function MatchLineup({ home, away }) {
   Object.entries(clubs).map(([key, { formation }]) => {
     if (key === away.toLowerCase()) { awayFormation = formation; return; }
   });
-
-  const [homeIsActive, setHomeIsActive] = useState(true);
-  const [awayIsActive, setAwayIsActive] = useState(false);
-
-  const homeActive = !homeIsActive ? 'opacity-60' : '';
-  const awayActive = !awayIsActive ? 'opacity-60' : '';
 
   Object.entries(allPlayers).map((player) => {
     if (player[1].team.toLowerCase() === home.toLowerCase()) {
@@ -48,12 +70,12 @@ export default function MatchLineup({ home, away }) {
   }
 
   let bgHome, bgAway;
-  
+
   if (home == "Juventus") bgHome = 'bg-black';
   else if (home == "Inter") bgHome = 'bg-inter-blue';
   else if (home == "Roma") bgHome = 'bg-roma-red';
   else bgHome = 'bg-milan-red';
-  
+
   if (away == "Juventus") bgAway = 'bg-black';
   else if (away == "Inter") bgAway = 'bg-inter-blue';
   else if (away == "Roma") bgAway = 'bg-roma-red';
@@ -66,7 +88,7 @@ export default function MatchLineup({ home, away }) {
           pl-2 w-full ${bgHome} ${homeActive} cursor-pointer md:hidden`}
           onClick={() => { handleClick('home') }}
         >
-          <img src={`/images/${homeImg}.svg`} 
+          <img src={`/images/${homeImg}.svg`}
             height="auto"
             width="auto"
             className="h-10 w-10"
@@ -82,16 +104,16 @@ export default function MatchLineup({ home, away }) {
           <span className="text-white mr-2">
             {awayFormation}
           </span>
-          <img src={`/images/${awayImg}.svg`} 
+          <img src={`/images/${awayImg}.svg`}
             height="auto"
             width="auto"
             className="h-10 w-10"
           />
         </div>
       </div>
-      <div className="w-full pt-4 min-h-full min-w-72">
+      <div className="w-full pt-4 min-h-full min-w-72 flex items-center justify-evenly">
         {
-          homeIsActive &&
+          homeIsActive && isMountedRef &&
           <Lineup
             team={home}
             formation={homeFormation}
@@ -99,7 +121,7 @@ export default function MatchLineup({ home, away }) {
           />
         }
         {
-          awayIsActive &&
+          awayIsActive && isMountedRef &&
           <Lineup
             team={away}
             formation={awayFormation}

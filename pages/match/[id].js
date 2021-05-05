@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "../../components/Footer";
 import MatchDetailHeader from "../../components/MatchDetailHeader";
 import MatchLineup from "../../components/MatchLineup";
@@ -9,27 +9,12 @@ import MatchScorers from "../../components/MatchScorers";
 import NavBar from "../../components/NavBar";
 import matches from "../../utils/matches";
 
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-  return size;
-}
-
 export default function Details() {
-
+  
   const router = useRouter();
   const { id } = router.query;
   const [showLineups, setShowLineups] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
-  const [showBothLinups, setShowBothLinups] = useState(false);
-  const [width] = useWindowSize();
 
   if (!id) return null;
 
@@ -43,10 +28,6 @@ export default function Details() {
       setShowLineups(false);
     }
     return;
-  }
-
-  if (width >= 768) {
-    
   }
 
   let match;

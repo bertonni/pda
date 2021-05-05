@@ -63,6 +63,14 @@ export default function RankingTable({ headers, data }) {
                         />
                       </td>
                       :
+                      indexData == rowData.length - 1 ?
+                      <td
+                        key={indexData}
+                        className="text-center w-16"
+                      >
+                        {item}
+                      </td>
+                      :
                       <td
                         key={indexData}
                         className="text-center"

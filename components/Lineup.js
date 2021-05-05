@@ -5,6 +5,15 @@ export default function Lineup({ team, formation, players }) {
 
   const [def, mid, str] = formation.split('-');
 
+  let teamImg = team == "Juventus" ? "Juventus_inverted" : team;
+
+  let bgTeam;
+
+  if (team == "Juventus") bgTeam = 'bg-black';
+  else if (team == "Inter") bgTeam = 'bg-inter-blue';
+  else if (team == "Roma") bgTeam = 'bg-roma-red';
+  else bgTeam = 'bg-milan-red';
+
   players.map((player) => {
     if (player.position === "Zagueiro") defenders.push(player);
     if (player.position === "Meio") midfielders.push(player);
@@ -12,9 +21,23 @@ export default function Lineup({ team, formation, players }) {
   })
 
   return (
-    <div className="flex items-center justify-center min-h-full min-w-72">
-      <div className="h-full w-10/12 flex flex-col items-center relative 
-        border-b-2 border-gray-150 mt-8 mb-6">
+    <div className="flex items-center justify-center min-h-full min-w-72 w-full">
+      <div className="h-full w-full sm:w-10/12 flex flex-col items-center 
+        relative border-b-2 border-gray-150 mb-6">
+        <div 
+          className={`md:flex md:items-center md:justify-center py-1 w-full 
+          ${bgTeam} hidden mb-6`}
+        >
+          <img src={`/images/${teamImg}.svg`}
+            height="auto"
+            width="auto"
+            className="h-10 w-10"
+          />
+          <span className="text-white ml-4">
+            {formation}
+          </span>
+        </div>
+
         {/* Strikers */}
         <div className="w-full flex justify-evenly mb-8">
           {strikers.map((striker, index) => {
