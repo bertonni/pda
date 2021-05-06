@@ -47,7 +47,7 @@ export default function Lineup({ team, formation, players }) {
                   key={index + Math.ceil(Math.random() * 10125) + 14179}
                   className="flex flex-col items-center justify-center min-w-24">
                   <img
-                    key={index + 31014}
+                    key={index + 3114 * Math.ceil(Math.random() * 100)}
                     src={`/images/profilePictures/${team.toLowerCase()}/${striker.number}.jpg`}
                     height="auto"
                     width="auto"
@@ -69,7 +69,7 @@ export default function Lineup({ team, formation, players }) {
                   key={index + Math.ceil(Math.random() * 10125) + 14179}
                   className="flex flex-col items-center justify-center min-w-24">
                   <img
-                    key={index + 31014}
+                    key={index + 31014 * Math.ceil(Math.random() * 100)}
                     src={`/images/profilePictures/${team.toLowerCase()}/${midfielder.number}.jpg`}
                     height="auto"
                     width="auto"
@@ -91,7 +91,7 @@ export default function Lineup({ team, formation, players }) {
                   key={index + Math.ceil(Math.random() * 10025) + 12034}
                   className="flex flex-col items-center justify-center min-w-24">
                   <img
-                    key={index + 321054}
+                    key={index + 32054 * Math.ceil(Math.random() * 100)}
                     src={`/images/profilePictures/${team.toLowerCase()}/${defender.number}.jpg`}
                     height="auto"
                     width="auto"

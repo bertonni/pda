@@ -13,10 +13,55 @@ function useIsMountedRef() {
   return isMountedRef;
 }
 
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  const [windowSize, setWindowSize] = useState(undefined);
+  const showBothLineups = useRef(null);
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize(window.innerWidth);
+      }
+
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+      if (windowSize >= 768) showBothLineups.current = true;
+      else showBothLineups.current = false;
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, [windowSize]); // Empty array ensures that effect is only run on mount
+  return showBothLineups;
+}
+
 export default function MatchLineup({ home, away }) {
 
   const [homeIsActive, setHomeIsActive] = useState(true);
   const [awayIsActive, setAwayIsActive] = useState(false);
+
+  const showBothLineups = useWindowSize();
+
+  useEffect(() => {
+    if (showBothLineups.current) {
+      setHomeIsActive(true);
+      setAwayIsActive(true);
+    } else {
+      setHomeIsActive(true);
+      setAwayIsActive(false);
+    }
+
+    return () => {
+      setHomeIsActive(false);
+      setAwayIsActive(false);
+    }
+  }, [showBothLineups.current])
 
   const homeActive = !homeIsActive ? 'opacity-60' : '';
   const awayActive = !awayIsActive ? 'opacity-60' : '';
@@ -30,9 +75,9 @@ export default function MatchLineup({ home, away }) {
   let homeFormation;
   let awayFormation;
 
-  let mql = window.matchMedia('(min-width: 768px)');
+  let mediaQuery = window.matchMedia('(min-width: 768px)');
 
-  mql.addEventListener("change", (e) => {
+  mediaQuery.addEventListener("change", (e) => {
     if (e.matches) {
       setHomeIsActive(true);
       setAwayIsActive(true);

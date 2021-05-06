@@ -13,19 +13,19 @@ export default function Details() {
   
   const router = useRouter();
   const { id } = router.query;
-  const [showLineups, setShowLineups] = useState(false);
+  const [showLineups, setShowLineups] = useState(true);
   const [showDetails, setShowDetails] = useState(false);
 
   if (!id) return null;
 
   function handleClick(value) {
     if (value === 'lineup') {
-      setShowLineups(!showLineups);
       setShowDetails(false);
+      setShowLineups(true);
     }
     if (value === 'details') {
-      setShowDetails(!showDetails);
       setShowLineups(false);
+      setShowDetails(true);
     }
     return;
   }

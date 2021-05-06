@@ -22,7 +22,7 @@ export default function MatchDetailHeader({ match }) {
       </div>
       <div
         className="w-full flex item-center justify-around
-        xs:justify-evenly min-h-14 max-w-lg"
+        xs:justify-evenly min-h-14 max-w-2xl"
       >
         <div className={`flex flex-col items-center ${bgHome} p-3`}>
           <img src={`/images/${match.home}.svg`}
@@ -33,11 +33,11 @@ export default function MatchDetailHeader({ match }) {
           </span>
         </div>
         <div className="flex items-center justify-center flex-grow">
-          <span className="font-roboto text-white text-4xl min-w-3.5">
+          <span className="font-roboto text-white text-4xl sm:text-6xl min-w-3.5">
             {match.homeScore == '' ? '-' : match.homeScore}
           </span>
-          <span className="font-roboto text-white px-3"> x </span>
-          <span className="font-roboto text-white text-4xl min-w-3.5">
+          <span className="font-roboto text-white  sm:text-2xl px-3"> x </span>
+          <span className="font-roboto text-white text-4xl sm:text-6xl min-w-3.5">
             {match.awayScore == '' ? '-' : match.awayScore}
           </span>
         </div>

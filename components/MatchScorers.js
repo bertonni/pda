@@ -5,7 +5,7 @@ export default function MatchScorers({ homeScorers, awayScorers }) {
     <>
       {!hasNoScore &&
       <div className="flex mt-4 items-center justify-center bg-blue-450 opacity-90 py-2 
-        w-full max-w-lg mx-auto min-h-16 sm:min-h-22">
+        w-full max-w-2xl mx-auto min-h-16 sm:min-h-22">
         <div className="flex w-full">
           <div className="w-1/2 flex flex-col relative">
             <ul>
