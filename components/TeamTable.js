@@ -20,7 +20,7 @@ export default function TeamTable({ headers, data, players }) {
     <div className="px-3 py-3 sm:px-10 md:px-20 flex justify-center">
       <table className="border-collapse w-full">
         <thead>
-          <tr className="border-b-3 border-gray-350 font-light h-9">
+          <tr className="border-b-3 border-gray-350 bg-white font-light h-9">
             {
               headers.map((header, indexHeader) => {
                 return (
@@ -45,7 +45,7 @@ export default function TeamTable({ headers, data, players }) {
               return (
                 <tr key={indexRow}
                   className="border-b border-gray-300 font-normal h-10
-                  text-center hover:bg-gray-200">
+                  text-center hover:bg-gray-200 bg-white">
                   {
                     rowData.map((item, indexData) => {
                       return (

@@ -22,7 +22,7 @@ export default function Round() {
     <div className="flex justify-center lg:justify-start pt-8 lg:pt-0 lg:ml-4"
       style={{ marginTop: '2px' }}>
       <div className="w-full max-w-xs min-w-72 sm:min-w-80 border-b-3 border-gray-350">
-        <div className="flex items-center justify-between border-b-3
+        <div className="flex items-center justify-between border-b-3 bg-white
         border-gray-350 h-9">
           <ChevronLeftIcon
             onClick={() => {handleCurrentRound(currentRound.game1.id - 1)}}

@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Footer from "../../components/Footer";
 import MatchDetailHeader from "../../components/MatchDetailHeader";
+import MatchDetails from "../../components/MatchDetails";
 import MatchLineup from "../../components/MatchLineup";
 import MatchMoreDetails from "../../components/MatchMoreDetails";
 import MatchScorers from "../../components/MatchScorers";
@@ -78,10 +79,9 @@ export default function Details() {
             }
             {
               showDetails &&
-              <div>
-                <h1> Match Details </h1>
-              </div>
-            } </>
+              <MatchDetails />
+            }
+          </>
           }
         </div>
       </div>

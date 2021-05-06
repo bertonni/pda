@@ -157,7 +157,7 @@ export default function MatchLineup({ home, away }) {
         </div>
       </div>
       <div className="w-full pt-4 min-h-full min-w-72 flex items-center 
-        justify-evenly">
+        justify-evenly sm:px-2 lg:px-20">
         {
           homeIsActive && isMountedRef &&
           <Lineup

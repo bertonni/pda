@@ -14,7 +14,7 @@ export default function Match(props) {
 
   return (
     <div className="flex flex-col items-center border-b border-gray-300
-      min-h-25 hover:bg-gray-150 cursor-pointer group px-2"
+      min-h-25 hover:bg-gray-150 cursor-pointer group px-2 bg-white"
       onClick={() => {router.push(`/match/${matchId}`)}}
     >
       <h3 className="pt-1 text-2xs md:text-xs">{header}</h3>

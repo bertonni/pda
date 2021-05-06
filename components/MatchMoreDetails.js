@@ -6,15 +6,15 @@ export default function MatchMoreDetails({ handle, lineups, details }) {
 
   return (
     <>
-      <div className="grid grid-cols-2 bg-gray-50 min-h">
-        <h2 className={`xs:hover:bg-gray-150 cursor-pointer py-2 
-          text-center text-gray-550 border-b-3 ${lineupBorder}`}
+      <div className="flex items-center justify-center bg-gray-50 min-h">
+        <h2 className={`xs:hover:bg-gray-150 cursor-pointer py-2 w-full
+          text-center text-gray-550 border-b-3 ${lineupBorder} lg:w-2/5`}
           onClick={() => handle('lineup')}
         >
           Escalação
         </h2>
-        <h2 className={`xs:hover:bg-gray-150 cursor-pointer py-2 
-          text-center text-gray-550 border-b-3 ${detailsBorder}`}
+        <h2 className={`xs:hover:bg-gray-150 cursor-pointer py-2 w-full
+          text-center text-gray-550 border-b-3 ${detailsBorder} lg:w-2/5`}
           onClick={() => handle('details')}
         >
           Detalhes
