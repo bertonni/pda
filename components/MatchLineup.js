@@ -37,7 +37,7 @@ function useWindowSize() {
       // Remove event listener on cleanup
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, [windowSize]); // Empty array ensures that effect is only run on mount
+  }, [windowSize]);
   return showBothLineups;
 }
 
@@ -70,21 +70,21 @@ export default function MatchLineup({ home, away }) {
 
   const isMountedRef = useIsMountedRef();
 
-  let homeImg = home == "Juventus" ? "Juventus_inverted" : home;
-  let awayImg = away == "Juventus" ? "Juventus_inverted" : away;
+  let homeImg = (home == "Juventus") ? "Juventus_inverted" : home;
+  let awayImg = (away == "Juventus") ? "Juventus_inverted" : away;
   let homeFormation;
   let awayFormation;
 
-  let mediaQuery = window.matchMedia('(min-width: 768px)');
+  let mediaMatch = window.matchMedia('(min-width: 768px)');
 
-  mediaQuery.addEventListener("change", (e) => {
+  mediaMatch.addEventListener("change", (e) => {
     if (e.matches) {
       setHomeIsActive(true);
       setAwayIsActive(true);
     } else {
       setAwayIsActive(false);
     }
-  })
+  });
 
   Object.entries(clubs).map(([key, { formation }]) => {
     if (key === home.toLowerCase()) { homeFormation = formation; return; }
@@ -142,8 +142,8 @@ export default function MatchLineup({ home, away }) {
             {homeFormation}
           </span>
         </div>
-        <div className={`flex items-center justify-end ml-px py-1 
-          pr-2 w-full ${bgAway} ${awayActive} cursor-pointer md:hidden`}
+        <div className={`flex items-center justify-end ml-px py-1 pr-2 w-full 
+          ${bgAway} ${awayActive} cursor-pointer md:hidden`}
           onClick={() => { handleClick('away') }}
         >
           <span className="text-white mr-2">
@@ -156,7 +156,8 @@ export default function MatchLineup({ home, away }) {
           />
         </div>
       </div>
-      <div className="w-full pt-4 min-h-full min-w-72 flex items-center justify-evenly">
+      <div className="w-full pt-4 min-h-full min-w-72 flex items-center 
+        justify-evenly">
         {
           homeIsActive && isMountedRef &&
           <Lineup

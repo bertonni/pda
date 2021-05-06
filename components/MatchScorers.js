@@ -30,7 +30,7 @@ export default function MatchScorers({ homeScorers, awayScorers }) {
               {awayScorers.map((scorer, index) => {
                 return (
                   <li
-                    key={index + 10000}
+                    key={index + 10101}
                     className="flex items-center">
                     <img
                       src="/images/white_ball.svg"

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Footer from "../../components/Footer";
 import MatchDetailHeader from "../../components/MatchDetailHeader";
 import MatchLineup from "../../components/MatchLineup";
@@ -35,7 +35,7 @@ export default function Details() {
     Object.entries(round).map(([key, matchData]) => {
       if (matchData.matchId === id) {
         match = { ...matchData };
-        return
+        return;
       }
     })
   })
@@ -87,5 +87,5 @@ export default function Details() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
