@@ -35,7 +35,7 @@ export default function Round() {
           />
         </div>
         <div className="flex flex-col w-full max-w-xs min-w-72 sm:min-w-80
-        overflow-auto scrollbar-hide max-h-96">
+        overflow-auto scrollbar-hide max-h-96 lg:max-h-120">
           {Object.entries(currentRound).map(([key, { matchId, date, time, location, home,
           away, homeScore, awayScore, status }]) => {
             return <div key={key}>
