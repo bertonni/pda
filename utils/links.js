@@ -27,8 +27,8 @@ export default {
   //   title: 'Entrar',
   //   url: '#'
   // },
-  // signup: {
-  //   title: 'Cadastro',
-  //   url: '/signup'
+  // auth: {
+  //   title: 'Entrar',
+  //   url: '/auth'
   // },
 }
