@@ -1,0 +1,83 @@
+{
+  "2022": {
+    "topScorer": "",
+    "topAssist": "",
+    "ranking": [],
+    "clubs": {
+      "0": {
+        "name": "Brasil",
+        "clubLogo": "",
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsPro": 0,
+        "goalsAgainst": 0,
+        "yellowCards": 0,
+        "redCards": 0
+      },
+      "1": {
+        "name": "Argentina",
+        "clubLogo": "",
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsPro": 0,
+        "goalsAgainst": 0,
+        "yellowCards": 0,
+        "redCards": 0
+      },
+      "2": {
+        "name": "Alemanha",
+        "clubLogo": "",
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsPro": 0,
+        "goalsAgainst": 0,
+        "yellowCards": 0,
+        "redCards": 0
+      },
+      "3": {
+        "name": "França",
+        "clubLogo": "",
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "goalsPro": 0,
+        "goalsAgainst": 0,
+        "yellowCards": 0,
+        "redCards": 0
+      }
+    },
+    "players": {
+      "0": {
+        "name": "",
+        "profilePicture": "",
+        "position": "",
+        "number": 0,
+        "club": "",
+        "age": "",
+        "foot": "",
+        "goals": "",
+        "assists": "",
+        "yellowCards": "",
+        "redCards": "",
+        "cumulativeCards": ""
+      }
+    },
+    "matches": {
+      "0": {
+        "date": "",
+        "time": "",
+        "location": "",
+        "home": "",
+        "away": "",
+        "scoreHome": "",
+        "scoreAway": "",
+        "scorersHome": [],
+        "scorersAway": [],
+        "status": ""
+      }
+    }
+  }
+}
