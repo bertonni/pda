@@ -10,7 +10,7 @@ export default function NavBar({ page, club }) {
   const router = useRouter();
   const bg = club == 'juventus' || club == 'inter' || club == 'milan'
     || club == 'roma' ? 'bg-transparent' : 'bg-gradient-to-r from-blue-450 to-blue-800';
-
+  // test
   return (
     <nav className="relative bg-transparent z-100">
       <div className={`h-14 ${bg} flex overflow-x-scroll scrollbar-hide 
