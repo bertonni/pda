@@ -72,8 +72,8 @@
         "location": "",
         "home": "",
         "away": "",
-        "scoreHome": "",
-        "scoreAway": "",
+        "scoreHome": 0,
+        "scoreAway": 0,
         "scorersHome": [],
         "scorersAway": [],
         "status": ""

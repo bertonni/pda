@@ -60,13 +60,18 @@ export default function Auth() {
     const email = formRef.current.email.value;
     const password = formRef.current.password.value;
 
-    if (email.trim() === '' || password.trim() === '' || name.trim() === '') {
+    if (email.trim() === '' || password.trim() === '') {
       setMessage('Os campos são obrigatórios');
       setHasMessage(true);
       return;
     }
 
     if (isSignup) {
+      if (name.trim() === '') {
+        setMessage('Os campos são obrigatórios');
+        setHasMessage(true);
+        return;
+      }
       const confirmPassword = formRef.current.confirmPassword.value;
       if (password !== confirmPassword && confirmPassword.trim() !== '') {
         setMessage('As senhas informadas são diferentes');
@@ -80,13 +85,11 @@ export default function Auth() {
       }
       setSendingRequest(true);
       signup(email, password, name);
-      sleep(2);
     }
 
     if (!isSignup) {
       setSendingRequest(true);
       signin(email, password);
-      sleep(2);
 
       if (errorMessage) {
         console.log('error message:', errorMessage);
@@ -97,6 +100,8 @@ export default function Auth() {
             break;
           case 'auth/user-not-found':
           case 'auth/wrong-password':
+            setMessage('Usuário ou senha incorretos!');
+            setHasMessage(true);
             break;
           case 'auth/email-already-in-use':
             setMessage('O e-mail informado já está cadastrado!');
