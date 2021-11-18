@@ -1,8 +1,11 @@
 import Round from "../components/Round";
 import LeaderboardTable from "../components/LeaderboardTable";
 import Layout from "../components/Layout";
+import { useState } from "react";
+import AddRound from "../components/AddRound";
 
 export default function Leaderboard() {
+  const [showAddRoundModal, setshowAddRoundModal] = useState(false)
   const headers = ['#', 'Equipe']
   const headers2 = ['P', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', '%', 'Últimos Jogos'];
   const data2 = [
@@ -18,10 +21,14 @@ export default function Leaderboard() {
     ['4', 'Milan']
   ];
 
-
   return (
     <Layout title="Classificação" page="leaderboard">
-      <div className="flex flex-col w-full pt-4 sm:px-2">
+      <div className="flex flex-col relative w-full pt-4 sm:px-2">
+        { showAddRoundModal &&
+          <AddRound
+            closeModal={() => setshowAddRoundModal(false)}
+          />
+        }
         <h1 className="px-2 pb-4 sm:px-10 md:px-20 text-xl sm:text-2xl text-gray-550">Classificação</h1>
         <div className="sm:px-10 md:px-20 flex flex-col lg:flex-row">
           <LeaderboardTable
@@ -30,7 +37,7 @@ export default function Leaderboard() {
             data={data1}
             data2={data2}
           />
-          <Round />
+          <Round setShowAddRoundModal={setshowAddRoundModal} />
         </div>
       </div>
     </Layout>

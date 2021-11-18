@@ -1,7 +1,8 @@
-export default function Input({ label, name, type, min, refs, placeholder }) {
+export default function Input({ label, name, type, min, refs, placeholder, fullWidth = false }) {
+  const width = fullWidth ? 'w-full' : '';
 
   return (
-    <div className="flex flex-col mt-1">
+    <div className={`${width} flex flex-col mt-1`}>
       <label className="text-gray-500">
         {label}:
       </label>

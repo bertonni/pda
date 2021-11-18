@@ -11,9 +11,9 @@ export default function Home() {
         <link rel="shortcut icon" href="caminhodoarquivo/favicon.ico" />
       </Head>
       <NavBar page={'home'} />
-      <div className="flex-grow flex flex-col">
-        <HomeInfo />
-      </div>
+        <div className="flex-grow flex flex-col">
+          <HomeInfo />
+        </div>
       <Footer />
     </div>
   )

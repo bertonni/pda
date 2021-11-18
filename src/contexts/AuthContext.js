@@ -11,6 +11,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword
 } from '../utils/db/firebase';
+import { query, limitToLast } from "firebase/database";
 import { useRouter } from "next/router";
 
 export const AuthContext = createContext();
@@ -25,23 +26,77 @@ export default function AuthProvider({ children }) {
     isAdmin: false,
   });
   const [errorMessage, setErrorMessage] = useState("");
-
+  const [clubs, setClubs] = useState([]);
+  const [managers, setManagers] = useState([]);
+  const [lastRound, setLastRound] = useState("");
+  
   useEffect(() => {
     const user = localStorage.getItem('logged-user') ?? null;
     setCurrentUser(user);
+    
+    getClubs();
+    getManagers();
+
     const unsubscribe = false;
+    
     onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       unsubscribe = true;
     });
-
+    
     return unsubscribe;
   }, [])
+  
+  function getClubs() {
+    const clubs = ref(db, '2022/clubs');
+      onValue(clubs, (snapshot) => {
+      setClubs(snapshot.val());
+    });
+  }
+
+  function getManagers() {
+    const managers = ref(db, '2022/managers');
+      onValue(managers, (snapshot) => {
+      setManagers(snapshot.val());
+    });
+  }
+
+  function getLastRound() {
+    const rounds = ref(db, '2022/rounds');
+    const result = query(rounds, limitToLast(1));
+    onValue(result, (snapshot) => {
+      setLastRound((Object.keys(snapshot.val())[0]));
+    }, {
+      onlyOnce: true
+    });
+  }
+
+  function addRound(date, time, home, away) {
+    getLastRound();
+    while(!lastRound) {
+      setTimeout(() => {
+        
+      }, 50);
+    }
+    
+    
+  }
+  
+  function addMatch() {
+    const roundsRef = ref(db, '2022/matches');
+    const newRoundsRef = push(roundsRef);
+  
+    set(newRoundsRef, {
+      username: name,
+      email: email,
+      isAdmin: false
+    })
+  }
 
   function signup(email, password, name) {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const usersRef = ref(db, 'users');
+        const usersRef = ref(db, '2022/users');
         const newUserRef = push(usersRef);
         
         setCurrentUser(userCredential.user);
@@ -104,12 +159,15 @@ export default function AuthProvider({ children }) {
   return (
     <AuthContext.Provider
       value={{
+        clubs,
+        managers,
         currentUser,
         errorMessage,
         setCurrentUser,
         signup,
         signin,
-        signout
+        signout,
+        addRound
       }}
     >
       {children}

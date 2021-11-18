@@ -6,7 +6,7 @@ export default function HomeInfo() {
       <section className="bg-blue-450 flex items-center sm:justify-evenly
           justify-center py-10 sm:h-48 md:h-64 lg:h-72 text-gray-100">
         <img
-          src='/images/pda_logo_3_azul_amarelo.svg'
+          src='/images/pda_logo_2.svg'
           className="hidden sm:block h-36 w-36 md:h-48 md:w-48"
         />
         <div className="flex flex-col items-center">

@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 
 export default function Auth() {
-  const { currentUser, errorMessage, signin, signup } = useContext(AuthContext);
+  const { errorMessage, signin, signup } = useContext(AuthContext);
   const router = useRouter();
 
   useEffect(() => {

@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 
 export default function Layout({ children, title, page, club }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
       <Head>
         <title>{title}</title>
       </Head>
