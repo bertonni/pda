@@ -55,63 +55,16 @@ export default function AddRound({ closeModal }) {
                 />
               </div>
               <div className="flex w-full gap-2">
-                <div className="flex flex-col w-full">
-                  <SelectInput
-                    label="Mandante"
-                    placeholder="Mandante"
-                    options={clubs}
-                  />
-                  {/* <label className="text-gray-500">
-                    Mandante
-                  </label>
-                  <select
-                    name="home"
-                    id="home"
-                    ref={homeTeam}
-                    className="h-10 border border-gray-300 rounded w-full pl-2">
-                    <option value="default">Mandante</option>
-                    {
-                      clubs.map((club, index) => (
-                        <option
-                          key={index}
-                          className="h-10"
-                          value={club.name.replace('ç', 'c').toLowerCase()}
-                        >
-                          <img
-                            className="h-10 w-full"
-                            src={`/clubLogos/${club.name}.jpg`}
-                            alt={`${club.name}`} />
-                        </option>
-                      ))
-                    }
-                  </select> */}
-                </div>
-                <div className="flex flex-col w-full">
-                  {/* <label className="text-gray-500">
-                    Visitante
-                  </label> */}
-                  {/* <select
-                    name="away"
-                    id="away"
-                    ref={awayTeam}
-                    className="h-10 border border-gray-300 rounded w-full pl-2">
-                    <option value="default">Visitante</option>
-                    {
-                      clubs.map((club, index) => (
-                        <option
-                          key={index}
-                          className="h-10"
-                          value={club.name.replace('ç', 'c').toLowerCase()}
-                        >
-                          <img
-                            className="h-10 w-full"
-                            src={`/clubLogos/${club.name}.jpg`}
-                            alt={`${club.name}`} />
-                        </option>
-                      ))
-                    }
-                  </select> */}
-                </div>
+                <SelectInput
+                  label="Mandante"
+                  placeholder="Mandante"
+                  options={clubs}
+                />
+                <SelectInput
+                  label="Visitante"
+                  placeholder="Visitante"
+                  options={clubs}
+                />
               </div>
               <Input
                 label="Local"

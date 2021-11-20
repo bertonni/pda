@@ -35,8 +35,8 @@ module.exports = {
         }
       },
       animation: {
-        'rotate-90': 'rotate90 0.4s forwards ease',
-        'rotate-180': 'rotate180 0.4s forwards ease',
+        'rotate-90': 'rotate90 0.3s forwards ease',
+        'rotate-180': 'rotate180 0.3s forwards ease',
         'slide-left': 'slideFromLeft 0.3s forwards ease',
         'slide-top': 'slideFromTop 0.3s forwards ease'
       },

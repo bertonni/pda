@@ -1,20 +1,20 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
-import { useState } from "react";
-import Footer from "../../components/Footer";
+import { useContext, useState } from "react";
 import Layout from "../../components/Layout";
 import MatchDetailHeader from "../../components/MatchDetailHeader";
 import MatchDetails from "../../components/MatchDetails";
 import MatchLineup from "../../components/MatchLineup";
 import MatchMoreDetails from "../../components/MatchMoreDetails";
 import MatchScorers from "../../components/MatchScorers";
-import NavBar from "../../components/NavBar";
+import { AuthContext } from "../../contexts/AuthContext";
 import matches from "../../utils/matches";
 
 export default function Details() {
 
   const router = useRouter();
   const { id } = router.query;
+
+  const { currentUser, managers } = useContext(AuthContext);
   const [showLineups, setShowLineups] = useState(true);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -33,6 +33,7 @@ export default function Details() {
   }
 
   let match;
+
   matches.map((round) => {
     Object.entries(round).map(([key, matchData]) => {
       if (matchData.matchId === id) {
@@ -57,6 +58,9 @@ export default function Details() {
                 homeScorers={match.homeScorers}
                 awayScorers={match.awayScorers}
               />
+              { currentUser && managers.includes(currentUser.email) &&
+                <button className="rounded bg-gray-100 px-4 py-1 my-2 w-max self-center">Editar</button>
+              }
               <MatchMoreDetails
                 handle={handleClick}
                 lineups={showLineups}
